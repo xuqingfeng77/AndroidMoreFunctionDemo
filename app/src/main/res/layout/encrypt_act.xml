@@ -1,0 +1,196 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RSA"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/encrypt_act_btn_2key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="产生密钥对" />
+
+            <EditText
+                android:id="@+id/encrypt_act_edtxt_pubkey"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="公钥" />
+
+            <EditText
+                android:id="@+id/encrypt_act_edtxt_prikey"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="私钥" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/encrypt_act_btn_pub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="公钥加密" />
+
+                <EditText
+                     android:id="@+id/encrypt_act_edtxt_encpub"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="公钥加密" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/encrypt_act_btn_pri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="私钥解密" />
+
+                <EditText
+                     android:id="@+id/encrypt_act_edtxt_encpri"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="私钥解密" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3DES"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/encrypt_act_btn_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24字节密钥加密" />
+
+                <EditText
+                    android:id="@+id/encrypt_act_edtxt_24"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="加密" />
+            </LinearLayout>
+              <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/encrypt_act_btn_dec24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24字节密钥解密" />
+
+                <EditText
+                    android:id="@+id/encrypt_act_edtxt_dec24"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="解密" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/encrypt_act_btn_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16字节密钥加密" />
+
+                <EditText
+                    android:id="@+id/encrypt_act_edtxt_16"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="加密" />
+            </LinearLayout>
+              <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/encrypt_act_btn_dec16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16字节密钥解密" />
+
+                <EditText
+                    android:id="@+id/encrypt_act_edtxt_dec16"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="解密" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/encrypt_act_btn_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8字节密钥" />
+
+                <EditText
+                    android:id="@+id/encrypt_act_edtxt_8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="加密" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MD5"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/encrypt_act_btn_md5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="加密" />
+
+                <EditText
+                    android:id="@+id/encrypt_act_edtxt_md5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="加密" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/rootView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+    <!--相机预览界面-->
+	<FrameLayout
+			android:id="@+id/cameraPreview"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent" />
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:paddingBottom="20dp"
+			android:paddingLeft="20dp"
+			android:paddingRight="20dp"
+			android:paddingTop="20dp">
+
+		<eeepay.androidmorefunctiondemo.phototwo.CameraCropBorderView
+			android:id="@+id/viewFocuse"
+			android:layout_width="80dp"
+			android:layout_height="80dp"
+			android:layout_centerInParent="true"
+			android:visibility="invisible" />
+	</RelativeLayout>
+
+	<FrameLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_gravity="right"
+            android:paddingRight="20dp">
+		<ImageView
+				android:id="@+id/bnCapture"
+				android:layout_width="60dp"
+				android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:src="@mipmap/ic_launcher"/>
+	</FrameLayout>
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:layout_marginTop="35dp"
+		android:text="请把证件置于方框中"/>
+</FrameLayout>

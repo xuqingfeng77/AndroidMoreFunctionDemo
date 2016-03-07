@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 交易类型 -->
+    <string-array name="main_activity_items">
+        <item>微信拍照效果</item>
+        <item>检测系统蓝牙版本</item>
+        <item>新圳宇设备调试</item>
+        <item>apk信息检测</item>
+        <item>加密</item>
+        <item>html5拍照</item>
+        <item>文件缓存数据</item>
+        <item>截取拍照图片</item>
+        <item>AIDL测试</item>
+        <item>读取当前apk所属应用市场（渠道）</item>
+
+    </string-array>
+    <string-array name="scroll_activity_items">
+        <item>上下循环滚动的自定义scrollview应用</item>
+    </string-array>
+    <string-array name="m_activity_items">
+        
+        <item>前期demo集合入口</item>
+        <item>http/https应用</item>
+    </string-array>
+    <string-array name="FILEENDINGOFFIC">
+        <item>.ppt</item>
+        <item>.pptx</item>
+        <item>.xls</item>
+        <item>.xlsx</item>
+        <item>.doc</item>
+        <item>.docx</item>
+        <item>.txt</item>
+        <item>.java</item>
+        <item>.c</item>
+        <item>.cpp</item>
+        <item>.py</item>
+        <item>.xml</item>
+        <item>.json</item>
+        <item>.log</item>
+        <item>.pdf</item>
+    </string-array>
+    <string-array name="FILENDINGMEDIA">
+        <item>.png</item>
+        <item>.gif</item>
+        <item>.jpg</item>
+        <item>.jpeg</item>
+        <item>.bmp</item>
+        <item>.mp3</item>
+        <item>.wav</item>
+        <item>.ogg</item>
+        <item>.midi</item>
+        <item>.mp4</item>
+        <item>.rmvb</item>
+        <item>.avi</item>
+        <item>.flv</item>
+    </string-array>
+    <string-array name="FILEENDINGHTML">
+        <item>.htm</item>
+        <item>.html</item>
+        <item>.php</item>
+        <item>.jsp</item>
+    </string-array>
+    <string-array name="FILEENDINGPACK">
+        <item>.jar</item>
+        <item>.zip</item>
+        <item>.rar</item>
+        <item>.gz</item>
+        <item>.apk</item>
+        <item>.img</item>
+    </string-array>
+
+</resources>

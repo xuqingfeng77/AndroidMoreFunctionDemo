@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BOX</string>
+    <string name="app_name_debug">BOX_测试版</string>
+
+    <!-- 图片浏览 -->
+    <string name="only_choose_num">超出可选图片张数</string>
+    <string name="finish">完成</string>
+    <string name="invalidSD">sdcard无效或没有插入！</string>
+    <string name="photo">选择相册</string>
+    <string name="album">相册</string>
+    <string name="preview">预览</string>
+    <string name="unfinished">完成</string>
+    <string name="camera_cancel">取消</string>
+    <string name="no_photo">相册没有图片</string>
+    <string name="title_activity_camera_webview">CameraWebviewActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_show_pic">ShowPicActivity</string>
+    <string name="title_activity_camera_weview">CameraWeviewAct</string>
+</resources>
