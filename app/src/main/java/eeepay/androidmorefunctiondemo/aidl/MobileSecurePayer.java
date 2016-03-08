@@ -30,6 +30,7 @@ public class MobileSecurePayer {
 	Handler mHandler = null;
 	int inWhat = 0;
 	Activity mActivity = null;
+	Intent intent;
 
 	private ServiceConnection mYSPayConnection = new ServiceConnection() {
 
@@ -68,8 +69,10 @@ public class MobileSecurePayer {
 		inWhat = myWhat;
 		// bind the service.
 		if (mYSPay == null) {
+			intent=new Intent(Ieeepay.class.getName());
+			intent.setPackage("com.eposp.aidlserviceapp");
 			mActivity.getApplicationContext().bindService(
-					new Intent(Ieeepay.class.getName()), mYSPayConnection,
+					intent, mYSPayConnection,
 					Context.BIND_AUTO_CREATE);
 		}
 		// else ok.
