@@ -42,6 +42,10 @@ public class Test extends AppCompatActivity {
 
      Intent intent=new Intent(this, CameraWeviewAct.class);
          startActivity(intent);
+        //test
+        //test
+        //test
+        //test
 
     }
 
