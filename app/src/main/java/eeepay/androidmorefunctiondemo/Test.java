@@ -39,7 +39,7 @@ public class Test extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test);
-
+//test
      Intent intent=new Intent(this, CameraWeviewAct.class);
          startActivity(intent);
 
