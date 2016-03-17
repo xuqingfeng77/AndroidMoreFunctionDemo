@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
 
                         }
                     } catch (Exception ex) {
-
+                        ex.printStackTrace();
                         Toast.makeText(mContext, "远程回调失败", Toast.LENGTH_SHORT)
                                 .show();
                     }
