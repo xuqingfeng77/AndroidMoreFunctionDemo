@@ -65,6 +65,7 @@ public class Test extends AppCompatActivity  implements IWXAPIEventHandler {
         //test
         //test
         //test
+        //test 分支git
 
     }
     public  void ShareClick(View v){
