@@ -69,10 +69,14 @@ public class MobileSecurePayer {
 		inWhat = myWhat;
 		// bind the service.
 		if (mYSPay == null) {
-			intent=new Intent(Ieeepay.class.getName());
-			intent.setPackage("com.eposp.aidlserviceapp");
+			//下面被注释掉的方法在5.0之前是可以用的
+//			mActivity.getApplicationContext().bindService(
+//					new Intent(Ieeepay.class.getName()), mYSPayConnection,
+//					Context.BIND_AUTO_CREATE);
+			Intent service=new Intent(Ieeepay.class.getName());
+			service.setPackage("com.eposp.aidlserviceapp");//5.0之后要明确告诉跳转的app的包名
 			mActivity.getApplicationContext().bindService(
-					intent, mYSPayConnection,
+					service, mYSPayConnection,
 					Context.BIND_AUTO_CREATE);
 		}
 		// else ok.
