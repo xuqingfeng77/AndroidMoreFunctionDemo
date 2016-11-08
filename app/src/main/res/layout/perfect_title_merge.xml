@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:src="@mipmap/lib_titlebar_back_normal"/>
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:text="标题"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_centerInParent="true"
+        android:textSize="18sp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:text="确定"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+</merge>

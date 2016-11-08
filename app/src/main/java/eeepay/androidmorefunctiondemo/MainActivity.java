@@ -26,6 +26,7 @@ import eeepay.androidmorefunctiondemo.aidl.MobileSecurePayer;
 import eeepay.androidmorefunctiondemo.des.EncryptAct;
 import eeepay.androidmorefunctiondemo.device.EncryptActivity;
 import eeepay.androidmorefunctiondemo.html.CameraWebviewActivity;
+import eeepay.androidmorefunctiondemo.perfectlayout.PerfectActivity;
 import eeepay.androidmorefunctiondemo.phototwo.ActivityCapture;
 import eeepay.androidmorefunctiondemo.util.PhoneUtil;
 
@@ -114,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if (position == 7) {
                     mIntent = new Intent(MainActivity.this, ActivityCapture.class);
                     MainActivity.this.startActivity(mIntent);
-                } else if (position == 8) {
+                } else if (position == 8) {//AIDL测试
                     try {
                         // start the pay.
                         MobileSecurePayer msp = new MobileSecurePayer();
@@ -133,9 +134,13 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(mContext, "远程回调失败", Toast.LENGTH_SHORT)
                                 .show();
                     }
-                } else if (position == 9) {
+                } else if (position == 9) {//渠道打包
                        Toast.makeText(mContext,"所属渠道："+getApplicationMetaValue("UMENG_CHANNEL"),Toast.LENGTH_SHORT).show();
-                } else {
+                } else if (position == 10) {//布局优化
+                    mIntent = new Intent(MainActivity.this, PerfectActivity.class);
+                    MainActivity.this.startActivity(mIntent);
+                }
+                else {
                 }
 //                Toast.makeText(mContext, "打包时间：" + getString(R.string.build_time) + "\n打包的主机信息：" + getString(R.string.build_host), Toast.LENGTH_SHORT).show();
 

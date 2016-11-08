@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:divider="@drawable/text_black"
+    android:showDividers="middle|beginning|end">
+    <!--showDividers 是分隔线的显示位置，beginning、middle、end分别代表显示在开始位置，中间，末尾。-->
+    <TextView
+        android:drawableLeft="@mipmap/dgyh"
+        android:drawableRight="@mipmap/lib_arrow_into_jt"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="16sp"
+        android:text="我的卡券"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:drawableLeft="@mipmap/dgyh"
+        android:drawableRight="@mipmap/lib_arrow_into_jt"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="16sp"
+        android:text="地址管理"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp"/>
+    <TextView
+        android:drawableLeft="@mipmap/dgyh"
+        android:drawableRight="@mipmap/lib_arrow_into_jt"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="16sp"
+        android:text="检查更新"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</LinearLayout>
