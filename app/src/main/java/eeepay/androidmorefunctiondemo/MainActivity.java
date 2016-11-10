@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -26,6 +27,7 @@ import eeepay.androidmorefunctiondemo.aidl.MobileSecurePayer;
 import eeepay.androidmorefunctiondemo.des.EncryptAct;
 import eeepay.androidmorefunctiondemo.device.EncryptActivity;
 import eeepay.androidmorefunctiondemo.html.CameraWebviewActivity;
+import eeepay.androidmorefunctiondemo.intentapp.MoreIntentActivity;
 import eeepay.androidmorefunctiondemo.perfectlayout.PerfectActivity;
 import eeepay.androidmorefunctiondemo.phototwo.ActivityCapture;
 import eeepay.androidmorefunctiondemo.util.PhoneUtil;
@@ -138,6 +140,9 @@ public class MainActivity extends AppCompatActivity {
                        Toast.makeText(mContext,"所属渠道："+getApplicationMetaValue("UMENG_CHANNEL"),Toast.LENGTH_SHORT).show();
                 } else if (position == 10) {//布局优化
                     mIntent = new Intent(MainActivity.this, PerfectActivity.class);
+                    MainActivity.this.startActivity(mIntent);
+                }else if (position == 11) {//多种调用其他app方法
+                    mIntent = new Intent(MainActivity.this, MoreIntentActivity.class);
                     MainActivity.this.startActivity(mIntent);
                 }
                 else {

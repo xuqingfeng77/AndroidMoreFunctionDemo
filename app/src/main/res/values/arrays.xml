@@ -13,6 +13,8 @@
         <item>截取拍照图片</item>
         <item>AIDL测试</item>
         <item>读取当前apk所属应用市场（渠道）</item>
+        <item>优化布局</item>
+        <item>调用其他app</item>
 
     </string-array>
     <string-array name="scroll_activity_items">
