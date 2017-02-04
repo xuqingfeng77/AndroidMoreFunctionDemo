@@ -263,7 +263,7 @@ public class EncryptAct extends Activity implements OnClickListener {
 	}
 	private void encBase64() {
 		String md = mEtxtBase64Msg.getText().toString();
-		mEtxtBase64Enc.setText(Base64.encode(md,"utf-8"));
+		mEtxtBase64Enc.setText(Base64.encode(md,"utf-8"));//utf-8；GB2312
 
 	}
 	private void decBase64() {

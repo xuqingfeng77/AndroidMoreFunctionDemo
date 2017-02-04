@@ -195,7 +195,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Base64"
+                android:text="Base64 （utf-8）"
                 android:textSize="20sp" />
             <EditText
                 android:id="@+id/encrypt_act_edtxt_base64msg"
@@ -221,7 +221,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:hint="加密后的内容"
-                    android:text="1234" />
+                     />
 
             </LinearLayout>
             <Button
