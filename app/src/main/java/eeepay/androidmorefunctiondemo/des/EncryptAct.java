@@ -16,6 +16,7 @@ import android.widget.EditText;
 
 import eeepay.androidmorefunctiondemo.R;
 import eeepay.androidmorefunctiondemo.md5.Md5;
+import eeepay.androidmorefunctiondemo.rsa.Base64;
 import eeepay.androidmorefunctiondemo.rsa.RSAUtils;
 import eeepay.androidmorefunctiondemo.util.MyLogger;
 
@@ -25,7 +26,7 @@ import eeepay.androidmorefunctiondemo.util.MyLogger;
  * 
  * @author xuqingfeng
  * @date 2013-7-17
- * @function RSA,3DES,MD5
+ * @function RSA,3DES,MD5,base64
  */
 public class EncryptAct extends Activity implements OnClickListener {
 	Button mBtn2Key;
@@ -37,6 +38,8 @@ public class EncryptAct extends Activity implements OnClickListener {
 	Button mBtn16Deckey;
 	Button mBtn8key;
 	Button mBtnMd5;
+	Button mBtnBase64;
+	Button mBtnBase64Dec;
 	EditText mEtxtPubkey;
 	EditText mEtxtPrikey;
 	EditText mEtxtEncPubkey;
@@ -47,6 +50,9 @@ public class EncryptAct extends Activity implements OnClickListener {
 	EditText mEtxt3Desdec16key;
 	EditText mEtxt3Des8key;
 	EditText mEtxtMd5;
+	EditText mEtxtBase64Msg;
+	EditText mEtxtBase64Enc;
+	EditText mEtxtBase64Dec;
 	Map<String, Object> map = null;
 	String pri = null;
 	String pub = null;
@@ -73,6 +79,8 @@ public class EncryptAct extends Activity implements OnClickListener {
 		mBtn16Deckey = (Button) findViewById(R.id.encrypt_act_btn_dec16);
 		mBtn8key = (Button) findViewById(R.id.encrypt_act_btn_8);
 		mBtnMd5 = (Button) findViewById(R.id.encrypt_act_btn_md5);
+		mBtnBase64 = (Button) findViewById(R.id.encrypt_act_btn_base64);
+		mBtnBase64Dec = (Button) findViewById(R.id.encrypt_act_btn_base64_dec);
 		mEtxtPubkey = (EditText) findViewById(R.id.encrypt_act_edtxt_pubkey);
 		mEtxtPrikey = (EditText) findViewById(R.id.encrypt_act_edtxt_prikey);
 		mEtxtEncPubkey = (EditText) findViewById(R.id.encrypt_act_edtxt_encpub);
@@ -83,6 +91,9 @@ public class EncryptAct extends Activity implements OnClickListener {
 		mEtxt3Desdec16key = (EditText) findViewById(R.id.encrypt_act_edtxt_dec16);
 		mEtxt3Des8key = (EditText) findViewById(R.id.encrypt_act_edtxt_8);
 		mEtxtMd5 = (EditText) findViewById(R.id.encrypt_act_edtxt_md5);
+		mEtxtBase64Msg = (EditText) findViewById(R.id.encrypt_act_edtxt_base64msg);
+		mEtxtBase64Enc = (EditText) findViewById(R.id.encrypt_act_edtxt_base64_enc);
+		mEtxtBase64Dec = (EditText) findViewById(R.id.encrypt_act_edtxt_base64_dec);
 		mBtn2Key.setOnClickListener(this);
 		mBtnPubkey.setOnClickListener(this);
 		mBtnPrikey.setOnClickListener(this);
@@ -92,6 +103,8 @@ public class EncryptAct extends Activity implements OnClickListener {
 		mBtn16Deckey.setOnClickListener(this);
 		mBtn8key.setOnClickListener(this);
 		mBtnMd5.setOnClickListener(this);
+		mBtnBase64.setOnClickListener(this);
+		mBtnBase64Dec.setOnClickListener(this);
 
 	}
 
@@ -163,6 +176,13 @@ public class EncryptAct extends Activity implements OnClickListener {
 		case R.id.encrypt_act_btn_md5:
 			encMd5();
 			break;
+			case R.id.encrypt_act_btn_base64:
+				encBase64();
+				break;
+			case R.id.encrypt_act_btn_base64_dec:
+				decBase64();
+				break;
+
 
 		}
 
@@ -239,6 +259,16 @@ public class EncryptAct extends Activity implements OnClickListener {
 	private void encMd5() {
 		String md = mEtxtMd5.getText().toString();
 		mEtxtMd5.setText(Md5.encode(md));
+
+	}
+	private void encBase64() {
+		String md = mEtxtBase64Msg.getText().toString();
+		mEtxtBase64Enc.setText(Base64.encode(md,"utf-8"));
+
+	}
+	private void decBase64() {
+		String md = mEtxtBase64Enc.getText().toString();
+		mEtxtBase64Dec.setText(Base64.decode(md,"utf-8"));
 
 	}
 }
