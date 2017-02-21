@@ -50,13 +50,14 @@ public class MainActivity extends AppCompatActivity {
         setAdapter();
         setListener();
     }
-   Handler handler=new Handler(){
-       @Override
-       public void handleMessage(Message msg) {
-           super.handleMessage(msg);
-           Toast.makeText(mContext,(String)msg.obj,Toast.LENGTH_SHORT).show();
-       }
-   };
+
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            Toast.makeText(mContext, (String) msg.obj, Toast.LENGTH_SHORT).show();
+        }
+    };
 
     private void setAdapter() {
         Resources mRes = MainActivity.this.getResources();
@@ -87,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
                     mIntent = new Intent(MainActivity.this, eeepay.androidmorefunctiondemo.photo.MainActivity2.class);
                     MainActivity.this.startActivity(mIntent);
+
                 } else if (position == 1) {
 
                     // api=18(4.3)才开始支持4.0，需要支持BLE通讯模块，需要包含LE
@@ -94,8 +96,8 @@ public class MainActivity extends AppCompatActivity {
                     boolean isSupportLE = getPackageManager().hasSystemFeature(
                             PackageManager.FEATURE_BLUETOOTH_LE);
                     Toast.makeText(mContext, "api=" + api + "\ngetPackageManager().hasSystemFeature(\n" +
-                            "                            PackageManager.FEATURE_BLUETOOTH_LE)=" + getPackageManager().hasSystemFeature(
-                            PackageManager.FEATURE_BLUETOOTH_LE), Toast.LENGTH_LONG).show();
+                            "                            PackageManager.FEATURE_BLUETOOTH_LE)=" + getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE), Toast.LENGTH_LONG).show();
+
                 } else if (position == 2) {
 
                     mIntent = new Intent(MainActivity.this, EncryptActivity.class);
@@ -137,15 +139,14 @@ public class MainActivity extends AppCompatActivity {
                                 .show();
                     }
                 } else if (position == 9) {//渠道打包
-                       Toast.makeText(mContext,"所属渠道："+getApplicationMetaValue("UMENG_CHANNEL"),Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "所属渠道：" + getApplicationMetaValue("UMENG_CHANNEL"), Toast.LENGTH_SHORT).show();
                 } else if (position == 10) {//布局优化
                     mIntent = new Intent(MainActivity.this, PerfectActivity.class);
                     MainActivity.this.startActivity(mIntent);
-                }else if (position == 11) {//多种调用其他app方法
+                } else if (position == 11) {//多种调用其他app方法
                     mIntent = new Intent(MainActivity.this, MoreIntentActivity.class);
                     MainActivity.this.startActivity(mIntent);
-                }
-                else {
+                } else {
                 }
 //                Toast.makeText(mContext, "打包时间：" + getString(R.string.build_time) + "\n打包的主机信息：" + getString(R.string.build_host), Toast.LENGTH_SHORT).show();
 
@@ -153,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     /**
      * 拼接json串
      */
@@ -165,10 +167,11 @@ public class MainActivity extends AppCompatActivity {
         String jsonStr = jsonObj.toString();
         return jsonStr;
     }
-    private String  getApplicationMetaValue(String name) {
-        String value= "";
+
+    private String getApplicationMetaValue(String name) {
+        String value = "";
         try {
-            ApplicationInfo appInfo =getPackageManager()
+            ApplicationInfo appInfo = getPackageManager()
                     .getApplicationInfo(getPackageName(),
                             PackageManager.GET_META_DATA);
             value = appInfo.metaData.getString(name);

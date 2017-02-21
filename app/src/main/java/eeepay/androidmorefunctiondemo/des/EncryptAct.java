@@ -135,7 +135,7 @@ public class EncryptAct extends Activity implements OnClickListener {
 		case R.id.encrypt_act_btn_pub:
 			byte[] data = mEtxtEncPubkey.getText().toString().getBytes();
 			try {
-				encodedData = RSAUtils.encryptByPublicKey(data, pub);
+				encodedData = RSAUtils.encryptByPublicKey(data, mEtxtPubkey.getText().toString().trim());
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -151,7 +151,7 @@ public class EncryptAct extends Activity implements OnClickListener {
 		case R.id.encrypt_act_btn_pri:
 			byte[] decodedData = null;
 			try {
-				decodedData = RSAUtils.decryptByPrivateKey(encodedData, pri);
+				decodedData = RSAUtils.decryptByPrivateKey(encodedData, mEtxtPrikey.getText().toString().trim());
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

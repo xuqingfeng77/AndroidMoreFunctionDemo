@@ -56,7 +56,7 @@ android {
             minSdkVersion 14
             applicationId 'eeepay.androidmorefunctiondemo.baidu'
             signingConfig signingConfigs.config
-            targetSdkVersion 2
+            targetSdkVersion 23
             versionCode 1
             versionName '1.0'
         }
