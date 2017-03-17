@@ -15,6 +15,7 @@
         <item>读取当前apk所属应用市场（渠道）</item>
         <item>优化布局</item>
         <item>调用其他app</item>
+        <item>下拉刷新测试</item>
 
     </string-array>
     <string-array name="scroll_activity_items">

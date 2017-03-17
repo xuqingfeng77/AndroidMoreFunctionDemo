@@ -61,6 +61,51 @@
 
         <activity android:name=".perfectlayout.PerfectActivity" />
         <activity android:name=".intentapp.MoreIntentActivity"></activity>
+
+        <activity
+            android:name="com.handmark.pulltorefresh.samples.LauncherActivity"
+            android:label="PtR ListView" >
+        </activity>
+        <activity
+            android:name="com.handmark.pulltorefresh.samples.PullToRefreshListActivity"
+            android:label="PtR ListView" >
+        </activity>
+        <activity
+            android:name="com.handmark.pulltorefresh.samples.PullToRefreshListFragmentActivity"
+            android:label="PtR ListView Fragment" >
+        </activity>
+        <activity
+            android:name="com.handmark.pulltorefresh.samples.PullToRefreshListInViewPagerActivity"
+            android:label="PtR ListView in ViewPager" >
+        </activity>
+        <activity
+            android:name="com.handmark.pulltorefresh.samples.PullToRefreshGridActivity"
+            android:label="PtR GridView" >
+        </activity>
+        <activity
+            android:name="com.handmark.pulltorefresh.samples.PullToRefreshExpandableListActivity"
+            android:label="PtR ExpandableListView" >
+        </activity>
+        <activity
+            android:name="com.handmark.pulltorefresh.samples.PullToRefreshWebViewActivity"
+            android:label="PtR WebView" >
+        </activity>
+        <activity
+            android:name="com.handmark.pulltorefresh.samples.PullToRefreshScrollViewActivity"
+            android:label="PtR ScrollView" >
+        </activity>
+        <activity
+            android:name="com.handmark.pulltorefresh.samples.PullToRefreshHorizontalScrollViewActivity"
+            android:label="PtR HorizontalScrollView" >
+        </activity>
+        <activity
+            android:name="com.handmark.pulltorefresh.samples.PullToRefreshViewPagerActivity"
+            android:label="PtR ViewPager" >
+        </activity>
+        <activity
+            android:name="com.handmark.pulltorefresh.samples.PullToRefreshWebView2Activity"
+            android:label="PtR WebView Advanced" >
+        </activity>
     </application>
 
 </manifest>

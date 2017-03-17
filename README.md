@@ -1,62 +1,61 @@
-BOXÏîÄ¿½á¹¹½éÉÜ
-===================
-----------
-#package introduce
-1.des£º3desËã·¨£¬¼ÓÃÜÓÃµÄ<br>
-2.device£ºÎŞÓÃ<br>
-3.html£º²âÊÔhtmlµ÷ÓÃÉãÏñÍ·ÎÊÌâ£¬Ä¿Ç°»¹Î´ÊµÏÖ<br>
-4.md5£ºmd5<br>
-5.photo£º·ÂÕÕÎ¢ĞÅÉÏ´«Í¼Æ¬µÄ×ö·¨<br>
-6.rsa:rsa¼ÓÃÜÓÃµÄ<br>
-7.util:³£ÓÃ¹¤¾ßÀà<br>
-8.phototwo:ÅÄÉí·İÖ¤ÕÕ½ØÍ¼<br>
-9.AIDL<br>
-10.²»Í¬ÇşµÀµÄ´ò°ü·½·¨<br>
-11.ºÜÆ¯ÁÁµÄÓÅ»¯²¼¾Ö·½·¨<br>
+#package introduce 1.desï¼š3desç®—æ³•ï¼ŒåŠ å¯†ç”¨çš„
+2.deviceï¼šæ— ç”¨
+3.htmlï¼šæµ‹è¯•htmlè°ƒç”¨æ‘„åƒå¤´é—®é¢˜ï¼Œç›®å‰è¿˜æœªå®ç°
+4.md5ï¼šmd5
+5.photoï¼šä»¿ç…§å¾®ä¿¡ä¸Šä¼ å›¾ç‰‡çš„åšæ³•
+6.rsa:rsaåŠ å¯†ç”¨çš„
+7.util:å¸¸ç”¨å·¥å…·ç±»
+8.phototwo:æ‹èº«ä»½è¯ç…§æˆªå›¾
+9.AIDL
+10.ä¸åŒæ¸ é“çš„æ‰“åŒ…æ–¹æ³•
+11.å¾ˆæ¼‚äº®çš„ä¼˜åŒ–å¸ƒå±€æ–¹æ³•
+12.è°ƒç”¨å…¶ä»–app
+13.ä¸‹æ‹‰åˆ·æ–°æµ‹è¯•ï¼Œ
 #assets
-
 
 #so
 
-
 #jar
 
-#module
-1.cameracropper:×Ô¶¨ÒåÅÄÕÕ½çÃæ£¬ÊµÏÖÅÄÕÕÍê¿ÉÒÔ×Ô¶¨Òå¼ôÇĞ<br>
-ÓÃ·¨£º<br>
-/*
-*Ìø×ª·½·¨
-*/
- private void intentPhotoAct(){
-        intentPhoto=new Intent(mContext,TakePhoteActivity.class);
-        startActivityForResult(intentPhoto,requestCodePhoto);
-    }
+#module 
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+1.cameracropper:è‡ªå®šä¹‰æ‹ç…§ç•Œé¢ï¼Œå®ç°æ‹ç…§å®Œå¯ä»¥è‡ªå®šä¹‰å‰ªåˆ‡ç”¨æ³•ï¼š
+```
+/* *è·³è½¬æ–¹æ³• */ private void intentPhotoAct(){ intentPhoto=new Intent(mContext,TakePhoteActivity.class); startActivityForResult(intentPhoto,requestCodePhoto); }
 
-        MyLogger.aLog().i("requestCode=" + requestCode);
-        MyLogger.aLog().i("resultCode=" + resultCode);
-        if(resultCode==RESULT_OK){
+@Override
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-            switch (requestCode) {
-                case requestCodePhoto://ÅÄÕÕ³É¹¦
-                   selectPhotoPahtResult(data.getData(),data.getStringExtra("path"));
-                    break;
+    MyLogger.aLog().i("requestCode=" + requestCode);
+    MyLogger.aLog().i("resultCode=" + resultCode);
+    if(resultCode==RESULT_OK){
 
-            }
+        switch (requestCode) {
+            case requestCodePhoto://æ‹ç…§æˆåŠŸ
+               selectPhotoPahtResult(data.getData(),data.getStringExtra("path"));
+                break;
+
         }
-        super.onActivityResult(requestCode, resultCode, data);
     }
+    super.onActivityResult(requestCode, resultCode, data);
+}
+private void selectPhotoPahtResult(Uri uri,String filepath){ switch (index) { case R.id.iv_acc_err1:// fileSFZZMPath = filepath; ivewSFZZM.setImageURI(uri); ivewSFZZM_pz.setImageResource(R.mipmap.photo2); break;
 
-   private void selectPhotoPahtResult(Uri uri,String filepath){
-       switch (index) {
-           case R.id.iv_acc_err1://
-               fileSFZZMPath = filepath;
-               ivewSFZZM.setImageURI(uri);
-               ivewSFZZM_pz.setImageResource(R.mipmap.photo2);
-               break;
-
-
-       }
    }
+}
+```
+2.android-pulltorefresh:ä¸Šä¸‹æ‹‰åˆ·æ–°ï¼Œè¿™ä¸ªä¸€ä¸ªå¼€æºåº“ï¼Œå·²ç»åœæ­¢æ›´æ–°å¥½å¤šå¹´ï¼Œ2012 å¹´å·¦å³å°±å‡ºæ¥ï¼Œæ”¯æŒlistviewï¼Œscrollviewï¼Œwebview ç­‰ç­‰çš„åˆ·æ–°
+```
+demo ç¤ºä¾‹éƒ½åœ¨ com.handmark.pulltorefresh.samples ä¸‹é¢ï¼Œå¯åŠ¨ Activityæ˜¯LauncherActivityï¼Œæºç æ˜¯eclipseç‰ˆçš„ï¼Œè¿™é‡Œæˆ‘è½¬æˆAndroidStudioç‰ˆï¼Œå¦‚æœæ‚¨é¡¹ç›®ä¸­è¦ä½¿ç”¨ï¼Œ
+åˆ™ç›´æ¥å¯¼å…¥android-pulltorefreshåº“å°±å¥½ï¼Œåœ¨å¯¼å…¥è¿‡ç¨‹ä¸­å¸¸è§çš„é—®é¢˜å°±æ˜¯ä»¥ä¸‹é…ç½®å’Œä½ ä¸»é¡¹ç›®ä¸ä¸€è‡´
+  > minSdkVersion 14
+  > targetSdkVersion 23
+  > compileSdkVersion
+  > buildToolsVersion
+  > com.android.support
+  
+è¿™é‡Œ demo åœ¨å®˜æ–¹çš„åŸºç¡€ä¸Šä¿®æ”¹äº†Mathè®¡ç®—é—®é¢˜
+
+æºç å‡ºè‡ªï¼šhttps://github.com/chrisbanes/Android-PullToRefreshï¼Œæºç ä½œè€…è¿˜æœ‰ä¸€ä»½æ”¹ç‰ˆ https://github.com/chrisbanes/ActionBar-PullToRefresh
+
+```

@@ -18,6 +18,8 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import com.handmark.pulltorefresh.samples.LauncherActivity;
+
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -104,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                     MainActivity.this.startActivity(mIntent);
                 } else if (position == 3) {
                     //defaultConfig {        resValue "string", "build_time", buildTime()        resValue "string", "build_host", hostName()        resValue "string", "build_revision", revision()    }
-                    Toast.makeText(mContext, "打包时间：" + getString(R.string.build_time) + "\n打包的主机信息：" + getString(R.string.build_host), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "包名：" + MainActivity.this.getPackageName() + "\n打包时间：" + getString(R.string.build_time) + "\n打包的主机信息：" + getString(R.string.build_host)+ "\n调试环境：" + BuildConfig.DEBUG, Toast.LENGTH_SHORT).show();
 
                 } else if (position == 4) {//加密
                     mIntent = new Intent(MainActivity.this, EncryptAct.class);
@@ -146,7 +148,9 @@ public class MainActivity extends AppCompatActivity {
                 } else if (position == 11) {//多种调用其他app方法
                     mIntent = new Intent(MainActivity.this, MoreIntentActivity.class);
                     MainActivity.this.startActivity(mIntent);
-                } else {
+                } else if(position==12){//下拉刷新测试
+                    mIntent = new Intent(MainActivity.this, LauncherActivity.class);
+                    MainActivity.this.startActivity(mIntent);
                 }
 //                Toast.makeText(mContext, "打包时间：" + getString(R.string.build_time) + "\n打包的主机信息：" + getString(R.string.build_host), Toast.LENGTH_SHORT).show();
 
