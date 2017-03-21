@@ -27,7 +27,9 @@ AndroidMoreFunctionDemo
 12.调用其他app<br>
 
 13.下拉刷新测试，<br>
-13.权限框架测试，PermissionsDispatcher使用  ，<br>
+
+14.权限框架测试，PermissionsDispatcher使用<br>
+
 
 **assets**
 
