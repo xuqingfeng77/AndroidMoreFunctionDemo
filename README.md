@@ -27,6 +27,7 @@ AndroidMoreFunctionDemo
 12.调用其他app<br>
 
 13.下拉刷新测试，<br>
+13.权限框架测试，PermissionsDispatcher使用  ，<br>
 
 **assets**
 
@@ -74,5 +75,21 @@ demo 示例都在 com.handmark.pulltorefresh.samples 下面，启动 Activity �
 这里 demo 在官方的基础上修改了 Math 计算问题
 
 源码出自：https://github.com/chrisbanes/Android-PullToRefresh，源码作者还有一份改版 https://github.com/chrisbanes/ActionBar-PullToRefresh
+
+```
+3.PermissionsDispatcher:权限库和 androidstudio plugin（20170321)
+开源项目地址：https://github.com/hotchemi/PermissionsDispatcher
+```
+安装 PermissionsDispatcher 方法
+
+1.project build.gradle 添加 classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+2.app build.gradle 添加 apply plugin: 'android-apt' 和dependencies中添加  compile 'com.github.hotchemi:permissionsdispatcher:2.3.2'
+apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.2'
+
+安装PermissionsDispatcher plugin 插件（Mac环境）
+
+1.Preferences-Plugins-搜索PermissionsDispatcher plugin
+2.安装完重启就好
+3.command+N，选择Generate Runtime Permission
 
 ```

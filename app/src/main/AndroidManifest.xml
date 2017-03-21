@@ -12,6 +12,12 @@
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <!-- SD卡写权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<!--打电话-->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--读取电话信息权限-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
 
     <!-- Test -->
     <!-- MainActivity -->
@@ -60,52 +66,41 @@
             android:value="${UMENG_CHANNEL_VALUE}" />
 
         <activity android:name=".perfectlayout.PerfectActivity" />
-        <activity android:name=".intentapp.MoreIntentActivity"></activity>
-
+        <activity android:name=".intentapp.MoreIntentActivity" />
         <activity
             android:name="com.handmark.pulltorefresh.samples.LauncherActivity"
-            android:label="PtR ListView" >
-        </activity>
+            android:label="PtR ListView"></activity>
         <activity
             android:name="com.handmark.pulltorefresh.samples.PullToRefreshListActivity"
-            android:label="PtR ListView" >
-        </activity>
+            android:label="PtR ListView"></activity>
         <activity
             android:name="com.handmark.pulltorefresh.samples.PullToRefreshListFragmentActivity"
-            android:label="PtR ListView Fragment" >
-        </activity>
+            android:label="PtR ListView Fragment"></activity>
         <activity
             android:name="com.handmark.pulltorefresh.samples.PullToRefreshListInViewPagerActivity"
-            android:label="PtR ListView in ViewPager" >
-        </activity>
+            android:label="PtR ListView in ViewPager"></activity>
         <activity
             android:name="com.handmark.pulltorefresh.samples.PullToRefreshGridActivity"
-            android:label="PtR GridView" >
-        </activity>
+            android:label="PtR GridView"></activity>
         <activity
             android:name="com.handmark.pulltorefresh.samples.PullToRefreshExpandableListActivity"
-            android:label="PtR ExpandableListView" >
-        </activity>
+            android:label="PtR ExpandableListView"></activity>
         <activity
             android:name="com.handmark.pulltorefresh.samples.PullToRefreshWebViewActivity"
-            android:label="PtR WebView" >
-        </activity>
+            android:label="PtR WebView"></activity>
         <activity
             android:name="com.handmark.pulltorefresh.samples.PullToRefreshScrollViewActivity"
-            android:label="PtR ScrollView" >
-        </activity>
+            android:label="PtR ScrollView"></activity>
         <activity
             android:name="com.handmark.pulltorefresh.samples.PullToRefreshHorizontalScrollViewActivity"
-            android:label="PtR HorizontalScrollView" >
-        </activity>
+            android:label="PtR HorizontalScrollView"></activity>
         <activity
             android:name="com.handmark.pulltorefresh.samples.PullToRefreshViewPagerActivity"
-            android:label="PtR ViewPager" >
-        </activity>
+            android:label="PtR ViewPager"></activity>
         <activity
             android:name="com.handmark.pulltorefresh.samples.PullToRefreshWebView2Activity"
-            android:label="PtR WebView Advanced" >
-        </activity>
+            android:label="PtR WebView Advanced"></activity>
+        <activity android:name=".permission.Main2Activity"></activity>
     </application>
 
 </manifest>

@@ -3,6 +3,9 @@
 
     <string name="app_name">BOX</string>
     <string name="app_name_debug">BOX_测试版</string>
+    <string name="permission_contacts_rationale">您拒绝了打电话权限，会影响app使用</string>
+    <string name="permission_write_rationale">您拒绝了存储权限，会影响app使用</string>
+    <string name="permission_readphone_rationale">存储和电话被拒绝，会影响app使用</string>
 
     <!-- 图片浏览 -->
     <string name="only_choose_num">超出可选图片张数</string>

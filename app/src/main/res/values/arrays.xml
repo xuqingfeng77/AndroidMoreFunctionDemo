@@ -16,6 +16,7 @@
         <item>优化布局</item>
         <item>调用其他app</item>
         <item>下拉刷新测试</item>
+        <item>权限测试</item>
 
     </string-array>
     <string-array name="scroll_activity_items">
