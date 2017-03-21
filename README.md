@@ -90,8 +90,15 @@ apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.2'
 
 安装PermissionsDispatcher plugin 插件（Mac环境）
 
-1.Preferences-Plugins-搜索PermissionsDispatcher plugin
+1.Preferences-Plugins -搜索 PermissionsDispatcher plugin
 2.安装完重启就好
 3.command+N，选择Generate Runtime Permission
+
+注意事项：
+
+每次在新的一个类里使用插件功能生产都需要重新 build 一次；
+那些 6.0 权限一定要在 AndroidManifest 里有写，然后需要申请的再去申请
+例如 eeepay.androidmorefunctiondemo.permission.Main2Activity 
+如果 READ_PHONE_STATE 在 AndroidManifest 中没用申请，则这个权限永远都没法授权成功
 
 ```

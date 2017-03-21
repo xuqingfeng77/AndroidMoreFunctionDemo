@@ -29,13 +29,13 @@ import permissions.dispatcher.OnShowRationale;
 import permissions.dispatcher.PermissionRequest;
 import permissions.dispatcher.RuntimePermissions;
 
-/**
- * @author xqf
- * @function
- * @date 2017/3/20
- * @update 权限管理测试类
- */
 
+/**
+ *@author : xqf
+ *@date   :2017/3/21 下午2:03
+ *@desc   :权限管理测试类
+ *@update :
+ */
 @RuntimePermissions
 public class Main2Activity extends AppCompatActivity {
 
@@ -79,7 +79,7 @@ private String TAG="Main2Activity";
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         Main2ActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode, grantResults);
         Log.d(TAG,"onRequestPermissionsResult=permissions"+permissions+"\nrequestCode="+requestCode);
-        Toast.makeText(this, "onRequestPermissionsResult=permissions"+permissions+"\nrequestCode="+requestCode, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "onRequestPermissionsResult=permissions"+permissions+"\nrequestCode="+requestCode, Toast.LENGTH_SHORT).show();
     }
 
     //勾选了系统权限提示对话框的"不在提示"按钮，就会回调这个方法，MIUI系统则不会回调这方法
@@ -93,7 +93,7 @@ private String TAG="Main2Activity";
     void testOnPermissionDenied() {
         Toast.makeText(this, "存储和电话，你拒绝了权限", Toast.LENGTH_SHORT).show();
     }
-    //不再询问已经被勾选
+    //不再询问已经被勾选,也就是不会弹出系统的授权询问的对话框
     @OnNeverAskAgain({Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_PHONE_STATE})
     void testOnNeverAskAgain() {
         gotoSetting();
