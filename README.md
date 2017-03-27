@@ -93,6 +93,12 @@ apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.2'
 1.Preferences-Plugins -搜索 PermissionsDispatcher plugin
 2.安装完重启就好
 3.command+N，选择Generate Runtime Permission
+4.插件生产的几个方法介绍
+NeedsPermission:涉及到权限的，需要执行的方法
+OnShowRationale:第一次拒绝后，第二次申请会走的方法，一般在这提示该权限使用目的; MIUI 系统不会回调这个方法, MIUI 系统安装完app会自动授权一些基本权限
+OnPermissionDenied:权限被拒绝后被回调的方法
+OnNeverAskAgain:第二次申请后，会出现"拒绝后不再询问"勾选，如果勾选了，再次申请权限就会走这个方法
+
 
 注意事项：
 
