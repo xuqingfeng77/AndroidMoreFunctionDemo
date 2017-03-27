@@ -30,6 +30,7 @@ AndroidMoreFunctionDemo
 
 14.权限框架测试，PermissionsDispatcher使用<br>
 
+15.test
 
 **assets**
 
