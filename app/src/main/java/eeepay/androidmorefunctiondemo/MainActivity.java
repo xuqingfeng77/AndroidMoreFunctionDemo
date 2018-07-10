@@ -31,6 +31,7 @@ import eeepay.androidmorefunctiondemo.device.EncryptActivity;
 import eeepay.androidmorefunctiondemo.edittext.EditActivity;
 import eeepay.androidmorefunctiondemo.html.CameraWebviewActivity;
 import eeepay.androidmorefunctiondemo.intentapp.MoreIntentActivity;
+import eeepay.androidmorefunctiondemo.keyboard.KeyboardAct;
 import eeepay.androidmorefunctiondemo.perfectlayout.PerfectActivity;
 import eeepay.androidmorefunctiondemo.permission.Main2Activity;
 import eeepay.androidmorefunctiondemo.phototwo.ActivityCapture;
@@ -158,6 +159,9 @@ public class MainActivity extends AppCompatActivity {
                     MainActivity.this.startActivity(mIntent);
                 }else if(position==14){//
                     mIntent = new Intent(MainActivity.this, EditActivity.class);
+                    MainActivity.this.startActivity(mIntent);
+                }else if(position==15){//
+                    mIntent = new Intent(MainActivity.this, KeyboardAct.class);
                     MainActivity.this.startActivity(mIntent);
                 }
 //                Toast.makeText(mContext, "打包时间：" + getString(R.string.build_time) + "\n打包的主机信息：" + getString(R.string.build_host), Toast.LENGTH_SHORT).show();

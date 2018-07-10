@@ -18,6 +18,7 @@
         <item>下拉刷新测试</item>
         <item>权限测试</item>
         <item>输入法挤推布局</item>
+        <item>自定义键盘</item>
 
     </string-array>
     <string-array name="scroll_activity_items">

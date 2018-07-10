@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffd8d8d8" >
+
+    <Button
+        android:id="@+id/virtual_key_btn_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:text="虚拟键盘测试" />
+    <TextView
+        android:layout_below="@id/virtual_key_btn_title"
+        android:layout_marginTop="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/virtual_key_edtxt_test"/>
+    <EditText
+        android:layout_below="@id/virtual_key_edtxt_test"
+        android:layout_marginTop="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/virtual_key_edtxt_test2"/>
+
+    <EditText
+        android:layout_below="@id/virtual_key_edtxt_test2"
+        android:layout_marginTop="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/virtual_key_edtxt_test3"/>
+
+
+</RelativeLayout>

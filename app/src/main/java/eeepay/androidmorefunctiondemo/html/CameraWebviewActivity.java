@@ -81,8 +81,10 @@ public class CameraWebviewActivity extends AppCompatActivity {
             }
         });
 
-        wv.loadUrl("file:///android_asset/photo.html");
+//        wv.loadUrl("file:///android_asset/photo.html");
 //        wv.loadUrl("file:///android_asset/index.html");
+        //测试html代码注入功能更
+        wv.loadUrl("file:///android_asset/intoHtm.html");
         final Handler mHandler = new Handler();
         //webview增加javascript接口，监听html页面中的js点击事件
         wv.addJavascriptInterface(new Object(){
@@ -142,7 +144,11 @@ public class CameraWebviewActivity extends AppCompatActivity {
         if (fromTakePhoto && requestCode ==1 && resultCode ==-1) {
             wv.loadUrl("javascript:wave2('" + fileFullName + "')");
         } else {
-            wv.loadUrl("javascript:wave2('Please take your photo')");
+//            wv.loadUrl("javascript:wave2('Please take your photo')");
+//            wv.loadUrl("javascript:tianchongcontentstr('<p>申请条件：<br\\/><\\/p><ol class=\\\" list-paddingleft-2\\\" style=\\\"list-style-type: decimal;\\\"><li><p>年龄18-55周岁<br\\/><\\/p><\\/li><li><p>芝麻分580分以上<\\/p><\\/li><li><p>身份认证，运营商，淘宝账号等<\\/p><\\/li><\\/ol><p><br\\/><\\/p><p><br\\/><\\/p>\n')");
+            //注入htmp代码片段
+            wv.loadUrl("javascript:tianchongcontentstr('<p style=\"text-align: left;\"><span style=\";font-family:宋体;font-size:19px\"><span style=\"font-family:宋体\">审核方式：</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p style=\"text-align: left;\"><span style=\";font-family:宋体;font-size:19px\"><span style=\"font-family:宋体\">线上审核，最快</span>10<span style=\"font-family:宋体\">分钟 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span></p><p style=\"text-align: left;\"><span style=\";font-family:宋体;font-size:19px\"><span style=\"font-family:宋体\">申请条件： &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p><p style=\"text-align: left;\"><span style=\";font-family:宋体;font-size:19px\"><span style=\"font-family:Calibri\">22</span><span style=\"font-family:宋体\">（含）</span><span style=\"font-family:Calibri\">~55</span><span style=\"font-family:宋体\">（含）周岁的私家车车主 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span></p><p style=\"text-align: left;\"><span style=\";font-family:宋体;font-size:19px\"><span style=\"font-family:宋体\">所需材料： &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span></p><p style=\"text-align: left;\"><span style=\";font-family:宋体;font-size:19px\"><span style=\"font-family:宋体\">中国大陆居民二代身份证、本人实名制手机号、本人行驶证 &nbsp; &nbsp; &nbsp;&nbsp;</span></span></p><p style=\"text-align: left;\"><span style=\"font-family: 宋体; font-size: 19px;\">授权认证： &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p><p style=\"text-align: left;\"><span style=\"font-family: 宋体; font-size: 19px;\">身份证、车辆认证</span></p>\n')");
+
         }
         fromTakePhoto = false;
         super.onActivityResult(requestCode, resultCode, data);

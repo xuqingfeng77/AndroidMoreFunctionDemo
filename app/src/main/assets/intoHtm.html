@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+    <link rel="stylesheet" href="newsWhite.css">
+    <style>
+*{margin:0;padding:0;}
+.xieyi1{font-size:12px !important;}
+.xieyi4{font-size:24px;}
+.xieyi5{font-size:27px;}
+
+
+    </style>
+    <script type="text/javascript">
+
+                function tianchongcontentstr(contentstr){
+                    document.getElementById("contentstr").innerHTML = contentstr;
+
+                    var objs=document.getElementsByTagName("p");
+                     for (var i = 0; i < objs.length; i++) {
+                        objs[i].className="xieyi1";
+                     }
+                      var objs2=document.getElementsByTagName("span");
+                     for (var j = 0; j < objs2.length; j++) {
+                        objs2[j].className="xieyi1";
+                     }
+                }
+
+    </script>
+
+</head>
+<body id="body">
+<div class="N_xq wh mr">
+    <div id="contentstr">
+
+    </div>
+</div>
+</body>
+</html>
+
+

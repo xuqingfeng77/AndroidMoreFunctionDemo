@@ -12,7 +12,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion '25.0.0'
     defaultConfig {
-        applicationId "eeepay.androidmorefunctiondemo"
+        applicationId "eeepay.androidmorefunctiondemo.x"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
@@ -44,22 +44,30 @@ android {
         abortOnError false
     }
     productFlavors {
-        xiaomi {
+        normal {
             minSdkVersion 14
-            applicationId 'eeepay.androidmorefunctiondemo.xiaomi'
+            applicationId 'eeepay.androidmorefunctiondemo.x'
             signingConfig signingConfigs.config
             targetSdkVersion 23
             versionCode 1
             versionName '1.0'
         }
-        baidu {
-            minSdkVersion 14
-            applicationId 'eeepay.androidmorefunctiondemo.baidu'
-            signingConfig signingConfigs.config
-            targetSdkVersion 23
-            versionCode 1
-            versionName '1.0'
-        }
+//        xiaomi {
+//            minSdkVersion 14
+//            applicationId 'eeepay.androidmorefunctiondemo.xiaomi'
+//            signingConfig signingConfigs.config
+//            targetSdkVersion 23
+//            versionCode 1
+//            versionName '1.0'
+//        }
+//        baidu {
+//            minSdkVersion 14
+//            applicationId 'eeepay.androidmorefunctiondemo.baidu'
+//            signingConfig signingConfigs.config
+//            targetSdkVersion 23
+//            versionCode 1
+//            versionName '1.0'
+//        }
     }
     productFlavors.all {
         flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
