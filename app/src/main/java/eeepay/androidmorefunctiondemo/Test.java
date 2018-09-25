@@ -93,6 +93,7 @@ public class Test extends AppCompatActivity  implements IWXAPIEventHandler {
         webpage.webpageUrl = "http://www.baidu.com";
         webpage.webpageUrl = "http://www.baidu.com";
         webpage.webpageUrl = "http://www.baidu.com";
+       String ddd = "http://www.baidu.com   test";
         WXMediaMessage msg = new WXMediaMessage(webpage);
         msg.title = "WebPage Title WebPage Title WebPage Title WebPage Title WebPage Title WebPage Title WebPage Title WebPage Title WebPage Title Very Long Very Long Very Long Very Long Very Long Very Long Very Long Very Long Very Long Very Long";
         msg.description = "WebPage Description WebPage Description WebPage Description WebPage Description WebPage Description WebPage Description WebPage Description WebPage Description WebPage Description Very Long Very Long Very Long Very Long Very Long Very Long Very Long";
