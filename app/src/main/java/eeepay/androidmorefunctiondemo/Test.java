@@ -65,7 +65,7 @@ public class Test extends AppCompatActivity  implements IWXAPIEventHandler {
         //test
         //test
         //test
-
+//        ShareClick
     }
     public  void ShareClick(View v){
         // 初始化一个WXTextObject对象
@@ -91,6 +91,9 @@ public class Test extends AppCompatActivity  implements IWXAPIEventHandler {
     public void ShareUrlClick(View v){
         WXWebpageObject webpage = new WXWebpageObject();
         webpage.webpageUrl = "http://www.baidu.com";
+        webpage.webpageUrl = "http://www.baidu.com";
+        webpage.webpageUrl = "http://www.baidu.com";
+       String ddd = "http://www.baidu.com   test";
         WXMediaMessage msg = new WXMediaMessage(webpage);
         msg.title = "WebPage Title WebPage Title WebPage Title WebPage Title WebPage Title WebPage Title WebPage Title WebPage Title WebPage Title Very Long Very Long Very Long Very Long Very Long Very Long Very Long Very Long Very Long Very Long";
         msg.description = "WebPage Description WebPage Description WebPage Description WebPage Description WebPage Description WebPage Description WebPage Description WebPage Description WebPage Description Very Long Very Long Very Long Very Long Very Long Very Long Very Long";
