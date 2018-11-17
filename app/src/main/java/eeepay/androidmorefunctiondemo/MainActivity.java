@@ -166,13 +166,13 @@ public class MainActivity extends AppCompatActivity {
                 }else if(position==15){//
                     mIntent = new Intent(MainActivity.this, KeyboardAct.class);
                     MainActivity.this.startActivity(mIntent);
-                }else if(position==14){//webp测试 4.0-4.2.1 和 4.2.1+
+                }else if(position==16){//webp测试 4.0-4.2.1 和 4.2.1+
                     mIntent = new Intent(MainActivity.this, WebPActivity.class);
                     MainActivity.this.startActivity(mIntent);
-                }else if(position==15){//kotlin测试
+                }else if(position==17){//kotlin测试
                     mIntent = new Intent(MainActivity.this, KotlinActivity.class);
                     MainActivity.this.startActivity(mIntent);
-                }else if(position==16){//kotlin测试
+                }else if(position==18){//kotlin测试
                     mIntent = new Intent(MainActivity.this, PayBallActivity.class);
                     MainActivity.this.startActivity(mIntent);
                 }
