@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
+apply plugin: 'kotlin-android'
 android {
     signingConfigs {
         config {
@@ -77,14 +78,14 @@ dependencies {
     // or 1.4-beta1
     compile project(':cameracropper')
     compile project(':android-pulltorefresh')
+    //    权限检查插件
     compile 'com.android.support:support-v4:23.0.1'
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.android.support:design:23.0.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
+    compile 'com.github.hotchemi:permissionsdispatcher:2.3.2'
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
+    apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.2'
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
-//    权限检查插件
-    compile 'com.github.hotchemi:permissionsdispatcher:2.3.2'
-    apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.2'
 }

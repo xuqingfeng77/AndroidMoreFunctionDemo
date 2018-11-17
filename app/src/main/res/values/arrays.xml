@@ -17,6 +17,9 @@
         <item>调用其他app</item>
         <item>下拉刷新测试</item>
         <item>权限测试</item>
+        <item>WebP测试</item>
+        <item>KotlinActivity 测试</item>
+        <item>玩球复投 测试</item>
 
     </string-array>
     <string-array name="scroll_activity_items">
