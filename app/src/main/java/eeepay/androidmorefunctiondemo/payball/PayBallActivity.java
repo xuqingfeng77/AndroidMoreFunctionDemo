@@ -52,8 +52,8 @@ public class PayBallActivity extends Activity {
         amountList.add(firstAmount);
         MyLogger.aLog().d("第1"+"单"+"投注金额"+firstAmount+"元\n");
         StringBuffer result=new StringBuffer();
-        result.append("此复投方案可以保证最后一次盈利为首次投注金额*赔率\n\n");
-        result.append("第1"+"单"+"投注金额"+firstAmount+"元\n");
+        result.append("此复投方案可以保证最后一次盈利为首次投注金额*赔率("+MathUtil.twoNumberUp(MathUtil.multiply(firstAmount,0.85)+"")+"元)\n\n");
+        result.append("第1"+"单"+"投注金额"+MathUtil.twoNumberUp(firstAmount+"")+"元\n");
 
         for(int i=1;i<blackNum;i++){
             int amountListSize=amountList.size();
@@ -63,8 +63,8 @@ public class PayBallActivity extends Activity {
             }
             tempAmount=tempAmount+ MathUtil.multiply(firstAmount,0.85);
             double aaresult=MathUtil.divide(tempAmount,percent);
-            MyLogger.aLog().d("第"+(i+1)+"单"+"投注金额"+aaresult+"元");
-            result.append("第"+(i+1)+"单"+"投注金额"+aaresult+"元\n");
+            MyLogger.aLog().d("第"+(i+1)+"单"+"投注金额"+MathUtil.twoNumberUp(aaresult+"")+"元");
+            result.append("第"+(i+1)+"单"+"投注金额"+MathUtil.twoNumberUp(aaresult+"")+"元\n");
             amountList.add(aaresult);
 
         }

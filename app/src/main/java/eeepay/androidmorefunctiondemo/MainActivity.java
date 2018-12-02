@@ -32,7 +32,7 @@ import eeepay.androidmorefunctiondemo.edittext.EditActivity;
 import eeepay.androidmorefunctiondemo.html.CameraWebviewActivity;
 import eeepay.androidmorefunctiondemo.intentapp.MoreIntentActivity;
 import eeepay.androidmorefunctiondemo.keyboard.KeyboardAct;
-import eeepay.androidmorefunctiondemo.kotlin.KotlinActivity;
+//import eeepay.androidmorefunctiondemo.kotlin.KotlinActivity;
 import eeepay.androidmorefunctiondemo.payball.PayBallActivity;
 import eeepay.androidmorefunctiondemo.perfectlayout.PerfectActivity;
 import eeepay.androidmorefunctiondemo.permission.Main2Activity;
@@ -170,8 +170,8 @@ public class MainActivity extends AppCompatActivity {
                     mIntent = new Intent(MainActivity.this, WebPActivity.class);
                     MainActivity.this.startActivity(mIntent);
                 }else if(position==17){//kotlin测试
-                    mIntent = new Intent(MainActivity.this, KotlinActivity.class);
-                    MainActivity.this.startActivity(mIntent);
+//                    mIntent = new Intent(MainActivity.this, KotlinActivity.class);
+//                    MainActivity.this.startActivity(mIntent);
                 }else if(position==18){//kotlin测试
                     mIntent = new Intent(MainActivity.this, PayBallActivity.class);
                     MainActivity.this.startActivity(mIntent);
