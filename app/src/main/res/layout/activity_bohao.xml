@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="eeepay.androidmorefunctiondemo.payball.PayBallActivity">
+
+    <!-- id为@id/android:list的ListView为客户化的list布局，如果没有，则系统会调用默认的布局 -->
+    <ListView
+        android:id="@+id/callView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scrollbars="vertical"
+        android:visibility="visible" >
+    </ListView>
+
+</LinearLayout>

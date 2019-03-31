@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import eeepay.androidmorefunctiondemo.aidl.MobileSecurePayer;
+import eeepay.androidmorefunctiondemo.bohao.BohaoActivity;
 import eeepay.androidmorefunctiondemo.des.EncryptAct;
 import eeepay.androidmorefunctiondemo.device.EncryptActivity;
 import eeepay.androidmorefunctiondemo.edittext.EditActivity;
@@ -174,6 +175,9 @@ public class MainActivity extends AppCompatActivity {
 //                    MainActivity.this.startActivity(mIntent);
                 }else if(position==18){//kotlin测试
                     mIntent = new Intent(MainActivity.this, PayBallActivity.class);
+                    MainActivity.this.startActivity(mIntent);
+                }else if(position==19){//kotlin测试
+                    mIntent = new Intent(MainActivity.this, BohaoActivity.class);
                     MainActivity.this.startActivity(mIntent);
                 }
 //                Toast.makeText(mContext, "打包时间：" + getString(R.string.build_time) + "\n打包的主机信息：" + getString(R.string.build_host), Toast.LENGTH_SHORT).show();
