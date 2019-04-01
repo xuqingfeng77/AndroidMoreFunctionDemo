@@ -45,14 +45,14 @@ public class PayBallActivity extends Activity {
         });
     }
     private void calcResult(){
-        int blackNum=Integer.parseInt(edtxtBlackNum.getText().toString());
+        int blackNum=Integer.parseInt(edtxtBlackNum.getText().toString())+1;
         double firstAmount=Double.parseDouble(edtxtFirstAmount.getText().toString());
         double percent=Double.parseDouble(edtxtPercent.getText().toString());
         List<Double> amountList=new ArrayList<>();
         amountList.add(firstAmount);
         MyLogger.aLog().d("第1"+"单"+"投注金额"+firstAmount+"元\n");
         StringBuffer result=new StringBuffer();
-        result.append("此复投方案可以保证最后一次盈利为首次投注金额*赔率("+MathUtil.twoNumberUp(MathUtil.multiply(firstAmount,0.85)+"")+"元)\n\n");
+        result.append("此复投方案可以保证出现连黑之后盈利为首次投注金额*赔率("+MathUtil.twoNumberUp(MathUtil.multiply(firstAmount,0.85)+"")+"元)\n\n");
         result.append("第1"+"单"+"投注金额"+MathUtil.twoNumberUp(firstAmount+"")+"元\n");
 
         for(int i=1;i<blackNum;i++){

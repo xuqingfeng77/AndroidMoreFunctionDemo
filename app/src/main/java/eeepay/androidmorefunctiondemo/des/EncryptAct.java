@@ -219,7 +219,8 @@ public class EncryptAct extends Activity implements OnClickListener {
 		byte k16[] = FormatConversion
 				.hexStringToBytes("11111111111111111111111111111116");
 		byte data16[] = FormatConversion
-				.hexStringToBytes("11111111111111111111111111111116");
+//				.hexStringToBytes("1111111111111111111111111111111611111111111113123123123123");
+				.hexStringToBytes("mEtxt3Des16key.setText(FormatConversion.bytesToHexString(SecurityUtils.encryptoECBKey2(data16, k16)));mEtxt3Des16key.setText(FormatConversion.bytesToHexString(SecurityUtils.encryptoECBKey2(data16, k16)));");
 		if (flag == 0) {
 			mEtxt3Des16key.setText(FormatConversion
 					.bytesToHexString(SecurityUtils

@@ -30,7 +30,8 @@ import eeepay.androidmorefunctiondemo.util.MyLogger;
 /**
  *@author : xqf
  *@date   :2019/4/1 上午12:31
- *@desc   :通讯记录分析
+ *@desc   :通讯记录分析；移动和联通的电话卡可以判断durtion如果大于0，则表示接通过，电信的需要另外处理
+ * 电信的官方回复是：CDMA手机在发起呼叫时，只要占用无线信道，就开始计时，它计的是手机占用信道的时间。计费时间是按照用户实际开始通话的时间计算的，不是手机显示的时间。
  *@update :
  */
 public class BohaoActivity extends Activity {
